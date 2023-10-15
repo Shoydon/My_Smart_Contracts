@@ -9,7 +9,7 @@
     <li>Crowdfunding 2.0</li>
     <li>Crowdfunding 3.0</li>
     <li>Transfer Ether</li>
-    <li>Voting (advanced)</li>
+    <li>Voting (intermediate)</li>
   </ol>
 </details>
 
