@@ -1,45 +1,46 @@
-// Task- provide detailed gas cost report for the following code by using storage ,
-// memory and calldata for the different structs and variables used. Use separate
-// functions to get title, author, bookId and price for this task
+// Solidity code to manage Books in a bookstore
+// Book struct: structure of a book 
+///setBook: takes parameters of book and creates a new book
+// resetBook: deletes the book with the particular bookID
+
 //SPDX-License-Identifier:MIT
-pragma solidity 0.8.6;
+pragma solidity ^0.8.6;
 contract structure{
     struct Book{
+        address owner;
         string title;
         string author;
-        uint bookID;
         uint price;
     }
-// define a struct- name of the struct variable to represent the struct
-    Book book;
-    function setBook() public {
-        book= Book("Blokchain for beginners","Ineuron",4,1000);
+    mapping(uint => Book) books;
+    uint[] booksID;
+    function setBook(string memory _title, string memory _author, uint _bookID, uint _price) public {
+        // books[_bookID] = Book(msg.sender, "Blokchain for beginners","Ineuron",1000);
+        require(books[_bookID].owner != address(0), "Book already exists");
+        books[_bookID] = Book({
+            owner: msg.sender,
+            title: _title,
+            author: _author,
+            price:_price
+        });
+        booksID.push(_bookID);
     }
-    function resetBook() public {
-        book= Book("","",0,0);
+    function resetBook(uint _bookID) public {
+        delete books[_bookID];
     }
-    function getBookId() public view returns(uint, uint){
-        // uint gas = gasleft();
-        uint gas = 0; 
-        gas = gasleft();
-        return (book.bookID, gas);
+    function getBookIds() public view returns(uint[] memory){
+        return booksID;
     }
-    function getAuthor() public view returns(string memory, uint){
-        // uint gas = gasleft();
-        uint gas = 0; 
-        gas = gasleft();
-        // gas = msg.gas;
-        return (book.author, gas);
+    function getAuthor(uint _bookID) public view returns(string memory){
+        return (books[_bookID].author);
     }
-    function getTitle() public view returns(string memory, uint){
-        uint gas = 0; 
-        gas = gasleft();
-        return (book.title, gas);
+    function getTitle(uint _bookID) public view returns(string memory){
+        return (books[_bookID].title);
     }
-    function getPrice() public view returns(uint, uint){
-        // uint gas = gasleft();
-        uint gas = 0; 
-        gas = gasleft();
-        return (book.price, gas);
+    function getPrice(uint _bookID) public view returns(uint){
+        return (books[_bookID].price);
+    }
+    function getBookInfo(uint _bookID) public view returns(Book memory){
+        return (books[_bookID]);
     }
 }

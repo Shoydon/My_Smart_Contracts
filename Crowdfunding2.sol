@@ -1,3 +1,8 @@
+//Similar to Crowdfunding.sol
+//Extra functions:
+//time constraint: the campaign will only run for a linited time after which no contributions will be taken (uint deadline line#16)
+//refund(): refunds the contribution by the particular msg.sender. function can only be called before the campaign deadline or before the owner windraws the funds
+
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 contract CrowdFunding{

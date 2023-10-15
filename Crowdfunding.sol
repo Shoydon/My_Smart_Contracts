@@ -1,3 +1,12 @@
+// 1. campaignOwner: The address of the campaign owner who can withdraw the funds once the funding goal is reached.
+// 2. fundingGoal: The target amount of Ether that needs to be raised for the campaign to be considered successful.
+// 3. totalFundsRaised: The accumulated amount of Ether raised by contributors.
+// 4. isCampaignComplete: A boolean variable that indicates whether the funding goal has been reached.
+// 5. contributions: A mapping to store the individual contributions made by different addresses.
+// 6. FundsRaised: An event emitted when someone makes a contribution.
+// 7. FundsReleased: An event emitted when the campaign owner withdraws the funds.
+// 8. contribute: A function that allows people to contribute Ether to the campaign. It updates the contributions mapping and checks whether the funding goal has been reached.
+// 9. releaseFunds: A function that allows the campaign owner to withdraw the funds once the funding goal is reached. It transfers the entire balance of the contract to the owner's address.
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 contract CrowdFunding{
@@ -40,21 +49,3 @@ contract CrowdFunding{
         emit FundsReleased(totalFundsRaised, "Thankyou all for contributing!");
     } 
 }
-// done
-// 1. campaignOwner: The address of the campaign owner who can withdraw the funds once the funding goal is reached.
-// done
-// 2. fundingGoal: The target amount of Ether that needs to be raised for the campaign to be considered successful.
-// done
-// 3. totalFundsRaised: The accumulated amount of Ether raised by contributors.
-// done
-// 4. isCampaignComplete: A boolean variable that indicates whether the funding goal has been reached.
-// done
-// 5. contributions: A mapping to store the individual contributions made by different addresses.
-// done
-// 6. FundsRaised: An event emitted when someone makes a contribution.
-// done
-// 7. FundsReleased: An event emitted when the campaign owner withdraws the funds.
-// done 
-// 8. contribute: A function that allows people to contribute Ether to the campaign. It updates the contributions mapping and checks whether the funding goal has been reached.
-// done
-// 9. releaseFunds: A function that allows the campaign owner to withdraw the funds once the funding goal is reached. It transfers the entire balance of the contract to the owner's address.
