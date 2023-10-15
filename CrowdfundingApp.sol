@@ -1,4 +1,4 @@
-//My acadmic Blockchain project
+//My academic Blockchain project
 
 // 1. campaignOwner: The address of the campaign owner who can withdraw the funds once the funding goal is reached.
 // 2. fundingGoal: The target amount of Ether that needs to be raised for the campaign to be considered successful.
