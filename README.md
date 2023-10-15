@@ -4,7 +4,7 @@
   <summary>List of Contracts</summary>
   <ol>
     <li>
-      <summary>Dapp-world-contest 7 contracts</summary>
+      Dapp-world-contest 7 contracts
       <ul>
         <li>Fibonacci Sequence</li>
         <li>Solah Parchi Thap - Easy</li>
