@@ -1,11 +1,14 @@
 // 1. bookSeats(uint[] seatNumbers): This function takes an array of seat numbers as input. 
-// An address can book a maximum of 4 seats (maxSeatsPerAddress)
-// maxSeats: maximum seats in the bus
 // It will then iterate through the array and for each seat number, it will check if that seat is already reserved or not by looking in a mapping
 // It will also check if there are any repetitions in the input
 // 2. showAvailableSeats() returns (uint[]): This function returns the array of all the seat numbers that are available. 
 // 3. checkAvailability(uint seatNumber) returns (bool): Using this function, availability of a seat can be checked. If seat corresponding to seatNumber is available, then the function returns true, else it returns false.
 // 4. myTickets() returns (uint[]):This function returns an array consisting of all the seat numbers booked by the msg.sender. In case, there are no seats booked, an empty array will be returned.
+// 5. customers: mapping to store the address of customers with the seats booked (as an array of integers)
+// 6. seatsBooked[] : array to store the seats that are booked
+// 7. maxSeatsPerAddress: max seats that can be booked by an address
+// 8. maxSeats: maximum seats in the bus
+
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
