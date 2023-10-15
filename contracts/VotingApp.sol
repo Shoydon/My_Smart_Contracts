@@ -51,7 +51,7 @@ contract Voting {
             votingStarted = true;   
             winningCandidate = candidateAddr;
         }
-        require(voters[msg.sender].hasRegistered, "You aren't registered as a voter");
+        require(voters[msg.sender].hasRegistered, "You are not registered as a voter");
         require(candidates[candidateAddr].hasRegistered, "Invalid Candidate address");
         require(!voters[msg.sender].hasVoted, "You have already voted");
         candidates[candidateAddr].votes += 1;
