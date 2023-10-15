@@ -6,10 +6,10 @@
     <li>Book Manager</li>
     <li>Bus Ticket Manager</li>
     <li>Crowdfunding</li>
-    <li>Crowdfunding 2</li>
-    <li>Crowdfunding 3</li>
+    <li>Crowdfunding 2.0</li>
+    <li>Crowdfunding 3.0</li>
     <li>Transfer Ether</li>
-    <li>Voting advanced</li>
+    <li>Voting (advanced)</li>
   </ol>
 </details>
 
