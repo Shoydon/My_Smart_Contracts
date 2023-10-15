@@ -3,6 +3,14 @@
 <details>
   <summary>List of Contracts</summary>
   <ol>
+    <li>
+      <summary>Dapp-world-contest 7 contracts</summary>
+      <ul>
+        <li>Fibonacci Sequence</li>
+        <li>Solah Parchi Thap - Easy</li>
+        <li>Solah Parchi Thap - Hard</li>
+      </ul>
+    </li>
     <li>Book Manager</li>
     <li>Bus Ticket Manager</li>
     <li>Crowdfunding</li>
