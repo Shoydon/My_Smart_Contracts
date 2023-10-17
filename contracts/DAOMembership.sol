@@ -55,3 +55,8 @@ contract DAOMembership {
         return numberOfMembers;
     }
 }
+
+// 1. applyForEntry() : Only accessible to the non-members of the DAO. Using this function they can send the request to join the DAO
+// 2. approveEntry(address applicant) : Only accessible only to the members of the DAO. Using this function, members can approve the applicants for the membership. As soon as 30% or more people approve the entry, the applicant becomes the member of the DAO.
+// 3. isMember(address participant) : Only accessible to the members of DAO. Using this function, a member can check by passing in the arguments wheather a user corresponding to the address is a member of DAO or not
+// 4. totalMembers() : Only accessible to the members of DAO. Using this function, a member can check the total number of current members in the DAO.
