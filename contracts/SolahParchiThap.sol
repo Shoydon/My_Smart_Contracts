@@ -2,6 +2,17 @@
 // There are 2 versions of the PS. This is the Easy version of it (https://dapp-world.com/problem/solah-parchi-thap-easy/problem?contest=7)
 // Game & functions' description written after code 
 
+//FUNCTIONS:
+// 1. getPlayerID(address addr) : takes address as input then checks if that address is a player in the game or not and returns his playerID
+// 2. isPLayer(address _player) : takes address as input then checks if that address is a player in the game or not (returns bool)
+// 3. setState(address[4] _players, uint8[4][4] _state) : Using this function, owner can start a game by assigning parchis to the players, given that there is currently no game in progress.
+// 4. passParchi(uint8 _type) : This function is only accessible to a valid player during the game in his/her own turn. The player must have at least one parchi of type ‘_type’.
+// 5. endGame() : Any player can access this during the game after at least 1 hour has passed since the start of the game. This will end the game abruptly without concluding any winner. This is to prevent cases where player either delay their turn, or try to keep 1 parchi of all 4 types with them to prevent anyone from winning the game.
+// 6. claimWin() : Any player can access this during the game given that the player has 4 parchis of same type. This will end the game and record a win corresponding to the player who has called this function.
+// 7. getState() returns (address[4] players, address turn, uint8[4][4] game): This function can only be accessed by the owner when a game is in progress. players corresponds to the array of addresses of players in the game in order of their turns. turn corresponds to the address of the player who has the ongoing turn. game corresponds to the current state of the parchis in the game as mentioned above.
+// 8. getWins(address player) returns (uint):This function can be accessed by anyone by providing an address of a valid player to get the number of wins corresponding to that address.
+// 9. myParchis returns (uint8[4] parchis):This function can be accessed by any player in an ongoing game to view his/her parchis. The format of the returned array is same as mentioned earlier.
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -121,17 +132,6 @@ contract SolahParchiThap {
         return (players, players[currPlayer], parchis);
     }
 }
-
-//FUNCTIONS:
-// 1. getPlayerID(address addr) : takes address as input then checks if that address is a player in the game or not and returns his playerID
-// 2. isPLayer(address _player) : takes address as input then checks if that address is a player in the game or not (returns bool)
-// 3. setState(address[4] _players, uint8[4][4] _state) : Using this function, owner can start a game by assigning parchis to the players, given that there is currently no game in progress.
-// 4. passParchi(uint8 _type) : This function is only accessible to a valid player during the game in his/her own turn. The player must have at least one parchi of type ‘_type’.
-// 5. endGame() : Any player can access this during the game after at least 1 hour has passed since the start of the game. This will end the game abruptly without concluding any winner. This is to prevent cases where player either delay their turn, or try to keep 1 parchi of all 4 types with them to prevent anyone from winning the game.
-// 6. claimWin() : Any player can access this during the game given that the player has 4 parchis of same type. This will end the game and record a win corresponding to the player who has called this function.
-// 7. getState() returns (address[4] players, address turn, uint8[4][4] game): This function can only be accessed by the owner when a game is in progress. players corresponds to the array of addresses of players in the game in order of their turns. turn corresponds to the address of the player who has the ongoing turn. game corresponds to the current state of the parchis in the game as mentioned above.
-// 8. getWins(address player) returns (uint):This function can be accessed by anyone by providing an address of a valid player to get the number of wins corresponding to that address.
-// 9. myParchis returns (uint8[4] parchis):This function can be accessed by any player in an ongoing game to view his/her parchis. The format of the returned array is same as mentioned earlier.
 
 //GAME DESCRIPTION
 // "16 Parchi Thap" is an enjoyable card game where four friends aim to collect four chits, called parchis, of the same type without revealing their hand to one another. They take turns passing chits, and the first to gather four of a kind wins the game!

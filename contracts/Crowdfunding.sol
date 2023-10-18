@@ -7,6 +7,7 @@
 // 7. FundsReleased: An event emitted when the campaign owner withdraws the funds.
 // 8. contribute: A function that allows people to contribute Ether to the campaign. It updates the contributions mapping and checks whether the funding goal has been reached.
 // 9. releaseFunds: A function that allows the campaign owner to withdraw the funds once the funding goal is reached. It transfers the entire balance of the contract to the owner's address.
+
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 contract CrowdFunding{

@@ -1,3 +1,11 @@
+// 1. grantScholarship() : This function is only accessible to the owner of the contract. The owner can use this function to assign credits to the wallet address of a student.
+// 2. registerMerchantAddress() : This function is only accessible to the owner of the contract. The owner can use this function to register a new merchant who can receive credits from students.
+// 3. deregisterMerchantAddress() : This function is only accessible to the owner of the contract. The owner can use this function to deregister an existing merchant. After deregistration, the student won't be able to send credits to this merchant until they are registered again.
+// 4. revokeScholarship() : This function is only accessible to the owner of the contract. The owner can use this function to revoke the scholarship of a student. After revocation, any unspent credits assigned to the student will be assigned back to the owner, and the student won't have access to spending any credits.
+// 5. spend():This function is only accessible to students holding scholarships. Students can use this function to transfer credits only to registered merchants.
+// 6. checkBalance() : This function is accessible by scholarship holding students, registered merchants, and the owner. Using this function, they can see the available credits assigned to their address.
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
 
@@ -94,10 +102,3 @@ contract ScholarshipCreditContract {
         revert();
     }
 }
-
-// 1. grantScholarship() : This function is only accessible to the owner of the contract. The owner can use this function to assign credits to the wallet address of a student.
-// 2. registerMerchantAddress() : This function is only accessible to the owner of the contract. The owner can use this function to register a new merchant who can receive credits from students.
-// 3. deregisterMerchantAddress() : This function is only accessible to the owner of the contract. The owner can use this function to deregister an existing merchant. After deregistration, the student won't be able to send credits to this merchant until they are registered again.
-// 4. revokeScholarship() : This function is only accessible to the owner of the contract. The owner can use this function to revoke the scholarship of a student. After revocation, any unspent credits assigned to the student will be assigned back to the owner, and the student won't have access to spending any credits.
-// 5. spend():This function is only accessible to students holding scholarships. Students can use this function to transfer credits only to registered merchants.
-// 6. checkBalance() : This function is accessible by scholarship holding students, registered merchants, and the owner. Using this function, they can see the available credits assigned to their address.
