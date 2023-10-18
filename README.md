@@ -17,6 +17,7 @@
     <li>Crowdfunding 2.0</li>
     <li>Crowdfunding 3.0</li>
     <li>DAO Membership</li>
+    <li>Scholarship Credit System</li>
     <li>Solah Parchi Thap game</li>
     <li>Transfer Ether</li>
     <li>Voting (intermediate)</li>
