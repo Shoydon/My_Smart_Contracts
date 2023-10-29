@@ -11,6 +11,14 @@
         <li>Solah Parchi Thap - Hard</li>
       </ul>
     </li>
+    <li>
+      Dapp-world-contest 8 contracts
+      <ul>
+        <li>Palindrome</li>
+        <li>Automatic Lottery System - Easy</li>
+        <li>Automatic Lottery System - Hard</li>
+      </ul>
+    </li>
     <li>Book Manager</li>
     <li>Bus Ticket Manager</li>
     <li>Crowdfunding</li>
