@@ -22,6 +22,7 @@
     <li>Books Manager</li>
     <li>Book Store (intermediate)</li>
     <li>Bus Ticket Manager</li>
+    <li>Chocolate Bag</li>
     <li>Crowdfunding</li>
     <li>Crowdfunding 2.0</li>
     <li>Crowdfunding 3.0</li>
