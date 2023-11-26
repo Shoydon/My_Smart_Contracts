@@ -19,6 +19,14 @@
         <li>Automatic Lottery System - Hard</li>
       </ul>
     </li>
+    <li>
+      Dapp-world-contest 9 contracts
+      <ul>
+        <li>Closest Prime Difference</li>
+        <li>Token Sale - Easy</li>
+        <li>Token Sale - Hard</li>
+      </ul>
+    </li>
     <li>Books Manager</li>
     <li>Book Store (intermediate)</li>
     <li>Bus Ticket Manager</li>
